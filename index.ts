@@ -404,7 +404,7 @@ const processUserSession = async ({ ctx, userId, photoId, replyMessageId }: User
             await asyncRetry(
                 async (bail) => {
                     try {
-                        await ctx.reply('Some nasty error has occurred, please try again\n\n' + (e as Error).toString());
+                        await ctx.reply('Jangan ngirim yg aneh - aneh 🤨\n\n' + (e as Error).toString());
                     } catch (e) {
                         if ((e as Error).toString().includes('was blocked by the user')) {
                             bail(new Error('Bot was blocked by the user'));
